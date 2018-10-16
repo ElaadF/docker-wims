@@ -25,7 +25,9 @@ The directory must be empty.
 
 ## 3. Build an image
 Use this command to build an image from the Dockerfile in this repository. This will take several minutes.   
-```docker build -t <image's name> <Dockerfile's directory>```   
+```console
+docker build -t <image's name> <Dockerfile's directory>
+```   
 
 
 ## 4. Run the container
