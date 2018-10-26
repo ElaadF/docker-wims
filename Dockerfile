@@ -86,7 +86,7 @@ RUN /bin/bash -c "source /etc/apache2/envvars"
 RUN echo 'ServerName 172.17.0.2' >> /etc/apache2/apache2.conf
 RUN echo 'manager_site=172.17.0.2' > log/wims.conf
 RUN echo 'site_manager=2' >> log/wims.conf
-COPY myself /home/wims/log/classes/.connections/
-COPY .def /home/wims/log/classes/9001/
+COPY config/myself /home/wims/log/classes/.connections/
+COPY config/.def /home/wims/log/classes/9001/
 RUN a2enmod cgi
 #ENTRYPOINT ./bin/apache-config && service apache2 restart
