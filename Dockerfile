@@ -3,7 +3,6 @@ MAINTAINER Elaad FURREEDAN <elaad.f@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE 1
-ENV APACHE_RUN_DIR /var/run/apache2
 EXPOSE 80
 WORKDIR /home/wims
 
@@ -66,7 +65,7 @@ RUN echo 'read+write* = /home/wims/tmp/sessions'  >> /etc/povray/3.7/povray.conf
 RUN echo 'deb https://faculty.math.illinois.edu/Macaulay2/Repositories/Debian stretch main'  >> /etc/apt/sources.list
 RUN wget --no-check-certificate https://faculty.math.illinois.edu/Macaulay2/PublicKeys/Macaulay2-key
 RUN apt-key add Macaulay2-key
-RUN apt-key adv --keyserver hkp://keys.gnupg.net --recv-key CD9C0E09B0C780943A1AD85553F8BD99F40DCB31
+RUN gpg2 --keyserver hkp://keys.gnupg.net --recv-key CD9C0E09B0C780943A1AD85553F8BD99F40DCB31
 RUN apt-get update -q
 RUN apt-get install -y -q macaulay2
 
