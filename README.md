@@ -5,7 +5,7 @@ Allows to install Wims inside a docker with the full set of tools use by Wims
 Your system must have, at least, 3GB of free space
 
 ### 1. Install Docker
-First of all you need to install Docker, please follow these instructions : 
+First of all you have to install Docker, please follow these instructions : 
 + [Debian](https://docs.docker.com/install/linux/docker-ce/debian/#uninstall-old-versions)
 + [OSX](https://docs.docker.com/docker-for-mac/install/)
 + [Windows](https://docs.docker.com/docker-for-windows/install/)
@@ -50,7 +50,7 @@ At the end of this step you, you have created a container and it's running on yo
 docker container start <container's name>
 docker container stop <container's name>
 ```   
-You can create multiple container with the same command, but the port and the name must be different. If you want to share the same files you will need to put the same directory's path to the these files as the others containers.
+You can create multiple container with the same command, but the port and the name have to be different. If you want to share the same files you will need to put the same directory's path to the these files as the others containers.
 
 ### 5. Restart services
 Run these commands :   
@@ -64,7 +64,7 @@ __Note__ : Always run these command **after** you start the container.
 ### 6. Acces from a web browser
 If you have run the container on your own device, you can access to Wims by using this URL :   
 **http://localhost:port/wims**   
-You must specify the port you have chosen previously.
+You have to specify the port you have chosen previously.
 
 ## II. Some useful commands
 + delete container :
