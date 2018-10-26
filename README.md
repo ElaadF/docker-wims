@@ -50,5 +50,5 @@ docker exec -it <container's name> service apache2 restart
 
 ## 6. Acces from a web browser
 If you have run the container on your own device, you can access to Wims by using this URL :   
-**Http://localhost:port/wims**   
+**http://localhost:port/wims**   
 You must specify the port you have chosen previously
