@@ -11,7 +11,7 @@ First of all you need to install Docker, please follow these instructions :
 + [Windows](https://docs.docker.com/docker-for-windows/install/)
 
 TL;TR for Debian :
-```
+```console
 sudo apt-get remove docker docker-engine docker.io
 sudo apt-get update
 sudo apt-get install \
@@ -23,7 +23,9 @@ sudo apt-get install \
  ```
 
 ### 2. Clone this repository
-``` git clone https://github.com/ElaadF/docker-wims <directory path>```
+```console
+git clone https://github.com/ElaadF/docker-wims <directory path>
+```   
 The directory must be empty.
 
 ### 3. Build an image
