@@ -40,11 +40,12 @@ You have to choose the name of the container, otherwise a random name will be as
 ```<host directory path>``` is the directory's path containing all your files that you want to share with the container.   
 ```<container target path>``` is the directory's path in the container where your files will be available.    
 
-At the end of this step you, you have created a container that you can stop and restart by using these command :   
+At the end of this step you, you have created a container and it's running on your system. You can stop and restart by using these command :   
 ```console
 docker container start <container's name>
 docker container stop <container's name>
-```
+```   
+You can create multiple container with the same command, but the port and the name must be different. If you want to share the same files you will need to put the same directory's path to the these files as the others containers.
 ### 5. Restart services
 Run these commands :   
 ```console
