@@ -7,8 +7,8 @@ ENV APACHE_RUN_DIR /var/run/apache2
 EXPOSE 80
 WORKDIR /home/wims
 
-RUN apt-get update
-RUN apt-get upgrade
+RUN apt-get -y update
+RUN apt-get -y upgrade
 
 RUN apt-get install -y --no-install-recommends \
     python3 \
@@ -50,6 +50,7 @@ RUN apt-get install -y --no-install-recommends \
 # Installing pip3
 RUN wget "https://bootstrap.pypa.io/get-pip.py" && \
     python3 get-pip.py
+RUN rm get-pip.py
 
 RUN pip install requests
 
