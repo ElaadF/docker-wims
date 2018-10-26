@@ -1,6 +1,8 @@
 # docker-wims
 Allows to install Wims inside a docker with the full set of tools use by Wims
+
 ## I. First installation
+
 ### 1. Install Docker
 First of all you need to install Docker, please follow these instructions : 
 + [Debian](https://docs.docker.com/install/linux/docker-ce/debian/#uninstall-old-versions)
@@ -46,6 +48,7 @@ docker container start <container's name>
 docker container stop <container's name>
 ```   
 You can create multiple container with the same command, but the port and the name must be different. If you want to share the same files you will need to put the same directory's path to the these files as the others containers.
+
 ### 5. Restart services
 Run these commands :   
 ```console
