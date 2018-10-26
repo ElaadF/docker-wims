@@ -42,8 +42,8 @@ You have to choose the name of the container, otherwise a random name will be as
 
 At the end of this step you, you have created a container that you can stop and restart by using these command :   
 ```console
-docker start <container's name>
-docker stop <container's name>
+docker container start <container's name>
+docker container stop <container's name>
 ```
 ### 5. Restart services
 Run these commands :   
