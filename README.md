@@ -66,7 +66,7 @@ If you have run the container on your own device, you can access to Wims by usin
 **http://localhost:port/wims**   
 You must specify the port you have chosen previously.
 
-## I. Some useful commands
+## II. Some useful commands
 + delete container :
 ```console
 docker container rm <name>
