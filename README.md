@@ -59,9 +59,42 @@ docker exec -it <container's name> ./bin/apache-config
 docker exec -it <container's name> service apache2 restart
 ```   
 
-Note : Always run these command **after** you start the container.
+__Note__ : Always run these command **after** you start the container.
 
 ### 6. Acces from a web browser
 If you have run the container on your own device, you can access to Wims by using this URL :   
 **http://localhost:port/wims**   
 You must specify the port you have chosen previously.
+
+## I. Some useful commands
++ delete container :
+```console
+docker container rm <name>
+```
+The container must be stopped before deleting
+
++ List running container :
+```console
+docker container ps 
+```
+
++ List stopped container :
+```console
+docker container ps -a
+```
+
++ List image :
+```console
+docker images
+```
+
++ Delete image :
+```console
+docker image rm <name>
+```
++ Enter into a container with a bash
+```console
+docker exec -it <name> bash
+```
+
+
