@@ -29,16 +29,15 @@ Use this command to build an image from the Dockerfile in this repository. This 
 docker build -t <image's name> <Dockerfile's directory>
 ```   
 
-
 ## 4. Run the container
 If the previous step has succed, you have to run the container with this following command :   
-```docker run -it --rm -d -p <host port>:80 --name <container name> <image's name>```   
+```docker run -itd -p <host port>:80 -v <host directory path>:<container target path> --name <container name> <image's name>```   
 ```<image's name>``` should correspond to the previous name that you have chosen.   
 You have to choose the name of the container, to reuse it.
 
 ## 5. Restart services
 Run these commands :   
 ```
-docker exec -it $ID_WIMS_CONTAINER ./bin/apache-config
-docker exec -it $ID_WIMS_CONTAINER service apache2 restart
+docker exec -it <container's name> ./bin/apache-config
+docker exec -it <container's name> service apache2 restart
 ```
