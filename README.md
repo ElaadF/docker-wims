@@ -2,7 +2,7 @@
 Allows to install Wims inside a docker with the full set of tools use by Wims
 
 ## I. First installation
-Your system must have at least 3GB of free space
+Your system must have, at least, 3GB of free space
 ### 1. Install Docker
 First of all you need to install Docker, please follow these instructions : 
 + [Debian](https://docs.docker.com/install/linux/docker-ce/debian/#uninstall-old-versions)
