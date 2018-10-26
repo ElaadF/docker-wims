@@ -33,7 +33,10 @@ docker build -t <image's name> <Dockerfile's directory>
 If the previous step has succed, you have to run the container with this following command :   
 ```docker run -itd -p <host port>:80 -v <host directory path>:<container target path> --name <container name> <image's name>```   
 ```<image's name>``` should correspond to the previous name that you have chosen.   
-You have to choose the name of the container, to reuse it.
+You have to choose the name of the container, otherwise an random name will be assigned.   
+```<host directory path>``` is the directory's path containing all your files that you want to share with the container.   
+```<container target path>``` is the directory's path in the container where your files will be available.    
+
 
 ## 5. Restart services
 Run these commands :   
