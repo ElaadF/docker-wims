@@ -1,5 +1,7 @@
-# **docker-wims** : How To Use
-Allows to install Wims inside a docker with the full set of tools use by Wims.
+# How To Use
+**docker-wims** allows you to install Wims inside a docker with the full set of tools use by Wims.   
+With this installation you will be able to run **several Wims instances**, each one in a docker container, by **sharing files**
+between containers and your local host. The **changes are refleted in real time** on all instances, host machine include.
 
 ## I. First installation
 Your system must have, at least, 3GB of free space.
