@@ -1,10 +1,13 @@
-# How To Use
-**docker-wims** allows you to install Wims inside a docker with the full set of tools use by Wims.   
-With this installation you will be able to run **several Wims instances**, each one in a docker container, by **sharing files**
-between containers and your local host. The **changes are refleted in real time** on all instances, host machine include.
+# Docker Wims
+**Docker Wims** allows you to install Wims inside a Docker container with the full set of tools used by Wims.
 
-## I. First installation
+## Getting Started
+With this installation you will be able to run **several Wims instances**, each one in a docker container, by **sharing files** between containers and your local host. The **changes are refleted in real time** on all instances, host machine include.
+
+## Prerequisites
 Your system must have, at least, 3GB of free space.
+
+## First Installation
 
 ### 1. Install Docker
 First of all you have to install Docker, please follow these instructions : 
@@ -13,6 +16,7 @@ First of all you have to install Docker, please follow these instructions :
 + [Windows](https://docs.docker.com/docker-for-windows/install/)
 
 TL;TR for Debian :
+__Note__ : *Install using the repository method*
 ```console
 sudo apt-get remove docker docker-engine docker.io
 sudo apt-get update
@@ -22,6 +26,12 @@ sudo apt-get install \
      curl \
      gnupg2 \
      software-properties-common
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/debian \
+   $(lsb_release -cs) \
+   stable"
+sudo apt-get install docker-ce  
  ```
 
 ### 2. Clone this repository
@@ -69,7 +79,7 @@ If you have run the container on your own device, you can access to Wims by usin
 **http://localhost:port/wims**   
 You have to specify the port you have chosen previously.
 
-## II. Some useful commands
+## Some useful commands
 + delete container :
 ```console
 docker container rm <name>
