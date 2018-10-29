@@ -17,7 +17,7 @@ First of all you have to install Docker, please follow these instructions :
 
 TL;TR for Debian :   
 *Install using the repository method*
-```console
+```bash
 $ sudo apt-get remove docker docker-engine docker.io
 $ sudo apt-get update
 $ sudo apt-get install \
@@ -35,21 +35,21 @@ $ sudo apt-get install docker-ce
  ```
 
 ### 2. Clone this repository
-```console
+```bash
 $ git clone https://github.com/ElaadF/docker-wims <directory path>
 ```   
 >**Note:** The directory must be empty if you use this command line to clone the project.
 
 ### 3. Build an image
 Use this command to build an image from the Dockerfile in this repository. This will take several minutes.   
-```console
+```bash
 $ docker build -t <image's name> <Dockerfile's directory>
 ```   
 
 >**Note:** The image requires 2.23GB of free space.
 ### 4. Run the container
 If the previous step has succed, you have to run the container by creating et starting it with this following command :   
-```console
+```bash
 $ docker run -itd -p <host port>:80 -v <host directory path>:<container target path> --name <container name> <image's name>
 ```   
 
@@ -62,14 +62,14 @@ You have to choose the name of the container, otherwise a random name will be as
 You can create several container with the same command, but the port and the name have to be different. If you want to share the same files you will need to put the same directory's path to these files as the others containers.   
 
 At the end of this step you, you have created a container and it's running on your system. You can stop and restart it by using these commands :   
-```console
+```
 $ docker container start <container's name>
 $ docker container stop <container's name>
 ```   
 
 ### 5. Restart services
 Run these commands :   
-```console
+```bash
 $ docker exec -it <container's name> ./bin/apache-config
 $ docker exec -it <container's name> service apache2 restart
 ```   
@@ -83,32 +83,32 @@ You have to specify the port you have chosen previously.
 
 ## Some useful commands
 + delete container :
-```console
+```bash
 $ docker container rm <name>
 ```
 The container must be stopped before deleting it.
 
 + List running container :
-```console
+```bash
 $ docker container ps 
 ```
 
 + List stopped container :
-```console
+```bash
 $ docker container ps -a
 ```
 
 + List image :
-```console
+```bash
 $ docker images
 ```
 
 + Delete image :
-```console
+```bash
 $ docker image rm <name>
 ```
 + Enter into a container with a bash
-```console
+```bash
 $ docker exec -it <name> bash
 ```
 
