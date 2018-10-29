@@ -53,11 +53,11 @@ If the previous step has succed, you have to run the container by creating et st
 $ docker run -itd -p <host port>:80 -v <host directory path>:<container target path> --name <container name> <image's name>
 ```   
 
-```<host port>``` is the port number which will serve to acces the Wims plateform in your web browser. An error will occur if the port number is alreaby taken.
-```<image's name>``` should correspond to the previous name you have chosen.   
++ ```<host port>``` is the port number which will serve to acces the Wims plateform in your web browser. An error will occur if the port number is alreaby taken.   
++ ```<image's name>``` should correspond to the previous name you have chosen.   
 You have to choose the name of the container, otherwise a random name will be assigned.   
-```<host directory path>``` is the directory's path containing all your files that you want to share with the container.   
-```<container target path>``` is the directory's path in the container where your files will be available.    
++ ```<host directory path>``` is the directory's path containing all your files that you want to share with the container.   
++ ```<container target path>``` is the directory's path in the container where your files will be available.    
 
 You can create several container with the same command, but the port and the name have to be different. If you want to share the same files you will need to put the same directory's path to these files as the others containers.   
 
