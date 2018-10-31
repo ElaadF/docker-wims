@@ -17,7 +17,7 @@ First of all you have to install Docker, please follow these instructions :
 
 TL;TR for Debian :   
 *Install using the repository method*
-```bash
+```
 $ sudo apt-get remove docker docker-engine docker.io
 $ sudo apt-get update
 $ sudo apt-get install \
@@ -35,21 +35,21 @@ $ sudo apt-get install docker-ce
  ```
 
 ### 2. Clone this repository
-```bash
+```
 $ git clone https://github.com/ElaadF/docker-wims <directory path>
 ```   
 >**Note:** The directory must be empty if you use this command line to clone the project.
 
 ### 3. Build an image
 Use this command to build an image from the Dockerfile in this repository. This will take several minutes.   
-```bash
+```
 $ docker build -t <image's name> <Dockerfile's directory>
 ```   
 
 >**Note:** The image requires 2.23GB of free space.
 ### 4. Run the container
 If the previous step has succed, you have to run the container by creating et starting it with this following command :   
-```bash
+```
 $ docker run -itd -p <host port>:80 -v <host directory path>:<container target path> --name <container name> <image's name>
 ```   
 
@@ -69,7 +69,7 @@ $ docker container stop <container's name>
 
 ### 5. Restart services
 Run these commands :   
-```bash
+```
 $ docker exec -it <container's name> ./bin/apache-config
 $ docker exec -it <container's name> service apache2 restart
 ```   
@@ -83,32 +83,32 @@ You have to specify the port you have chosen previously.
 
 ## Some useful commands
 + delete container :
-```bash
+```
 $ docker container rm <name>
 ```
 The container must be stopped before deleting it.
 
 + List running container :
-```bash
+```
 $ docker container ps 
 ```
 
 + List stopped container :
-```bash
+```
 $ docker container ps -a
 ```
 
 + List image :
-```bash
+```
 $ docker images
 ```
 
 + Delete image :
-```bash
+```
 $ docker image rm <name>
 ```
 + Enter into a container with a bash
-```bash
+```
 $ docker exec -it <name> bash
 ```
 
