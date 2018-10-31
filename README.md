@@ -2,7 +2,7 @@
 **Docker Wims** allows you to install Wims inside a Docker container with the full set of tools used by Wims.
 
 ## Getting Started
-With this installation you will be able to run **several Wims instances**, each one in a docker container, by **sharing files** between containers and your local host. The **changes are refleted in real time** on all instances, host machine include.
+With this installation you will be able to run **several Wims instances**, each one in a docker container, by **sharing files** between containers and your local host. The **changes are refleted in real time** on **all instances**, **host machine** include.
 
 ## Prerequisites
 Your system must have, at least, 3GB of free space.
@@ -74,11 +74,11 @@ $ docker exec -it <container's name> ./bin/apache-config
 $ docker exec -it <container's name> service apache2 restart
 ```   
 
->**Note:** Always run these command **after** you start the container.
+>**Note:** Always run these commands **after** you start the container. Otherwise it will not work.
 
 ### 6. Acces from a web browser
 If you have run the container on your own device, you can access to Wims by using this URL :   
-**http://localhost:port/wims**   
+**http://localhost:*port*/wims**   
 You have to specify the port you have chosen previously.
 
 ## Some useful commands
