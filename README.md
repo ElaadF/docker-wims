@@ -107,7 +107,7 @@ $ docker images
 ```
 $ docker image rm <name>
 ```
-+ Enter into a container with a bash
++ Open a shell into a container
 ```
 $ docker exec -it <name> bash
 ```
