@@ -8,7 +8,7 @@
 
 # For security reasons, it is highly recommended that you only accept
 # localhost connections. Accept several sites, but no wildcard.
-ident_site=127.0.0.1
+ident_site=172.17.0.1
 
 # Short description
 ident_desc=This WIMS server
