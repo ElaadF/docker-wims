@@ -18,39 +18,39 @@ First of all you have to install Docker, please follow these instructions :
 TL;TR for Debian :   
 *Install using the repository method*
 ```
-$ sudo apt-get remove docker docker-engine docker.io
-$ sudo apt-get update
-$ sudo apt-get install \
+sudo apt-get remove docker docker-engine docker.io
+sudo apt-get update
+sudo apt-get install \
      apt-transport-https \
      ca-certificates \
      curl \
      gnupg2 \
      software-properties-common
-$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-$ sudo add-apt-repository \
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/debian \
    $(lsb_release -cs) \
    stable"
-$ sudo apt-get install docker-ce  
+sudo apt-get install docker-ce  
  ```
 
 ### 2. Clone this repository
 ```
-$ git clone https://github.com/ElaadF/docker-wims <directory's path>
+git clone https://github.com/ElaadF/docker-wims <directory's path>
 ```   
 >**Note:** The directory must be empty if you use this command line to clone the project.
 
 ### 3. Build an image
 Use this command to build an image from the Dockerfile in this repository. This will take several minutes.   
 ```
-$ docker build -t <image's name> <Dockerfile's directory>
+docker build -t <image's name> <Dockerfile's directory>
 ```   
 >**Note:** The image requires 2.23GB of free space.
 
 ### 4. Run the container
 If the previous step has succed, you have to run the container by creating and starting it with this following command :   
 ```
-$ docker run -itd -p <host port>:80 -v <host directory's path>:<container target's path> --name <container's name> <image's name>
+docker run -itd -p <host port>:80 -v <host directory's path>:<container target's path> --name <container's name> <image's name>
 ```   
 
 + ```<host port>``` is the port number which will serve to acces the Wims plateform in your web browser. An error will occur if the port number is alreaby taken.   
@@ -63,15 +63,15 @@ You can create several containers with the same command, but the port and the na
 
 At the end of this step you, you have created a container and it is running on your system. You can start and stop it by using these commands :   
 ```
-$ docker container start <container's name>
-$ docker container stop <container's name>
+docker container start <container's name>
+docker container stop <container's name>
 ```   
 
 ### 5. Restart services
 Run these commands :   
 ```
-$ docker exec -it <container's name> ./bin/apache-config
-$ docker exec -it <container's name> service apache2 restart
+docker exec -it <container's name> ./bin/apache-config
+docker exec -it <container's name> service apache2 restart
 ```   
 
 >**Note:** Always run these commands **after** you start the container. Otherwise it will not work.
@@ -84,35 +84,35 @@ You have to **specify the port number** you have chosen previously.
 ## Some useful commands
 + delete container :
 ```
-$ docker container rm <name>
+docker container rm <name>
 ```
 The container must be stopped before deleting it. 
 >**Note:** You can specify several containers at one time, separating each name by a space.
 
 + List running container :
 ```
-$ docker container ps 
+docker container ps 
 ```
 
 + List stopped container :
 ```
-$ docker container ps -a
+docker container ps -a
 ```
 
 + List image :
 ```
-$ docker images
+docker images
 ```
 
 + Delete image :
 ```
-$ docker image rm <name>
+docker image rm <name>
 ```
 >**Note:** if a container is using this image to run, you have to stop it first, and then, delete the image.
 
 + Open a shell into a container
 ```
-$ docker exec -it <name> bash
+docker exec -it <name> bash
 ```
 
 
