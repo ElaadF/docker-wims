@@ -48,7 +48,7 @@ $ docker build -t <image's name> <Dockerfile's directory>
 >**Note:** The image requires 2.23GB of free space.
 
 ### 4. Run the container
-If the previous step has succed, you have to run the container by creating et starting it with this following command :   
+If the previous step has succed, you have to run the container by creating and starting it with this following command :   
 ```
 $ docker run -itd -p <host port>:80 -v <host directory's path>:<container target's path> --name <container's name> <image's name>
 ```   
