@@ -5,11 +5,11 @@
 With this installation you will be able to run **several Wims instances**, each one in a docker container, by **sharing files** between containers and your local host. The **changes are refleted in real time** on **all instances**, **host machine** include.
 
 ## Prerequisites
-Your system must have, at least, 3GB of free space.
+Your system must have : 
++ at least, 3GB of free space
++ docker CE installed (see the official documentation or try this quick insallation bellow)
 
-## First Installation
-
-### 1. Install Docker CE
+### Install Docker CE
 First of all you have to install Docker, please follow these instructions : 
 + [Debian](https://docs.docker.com/install/linux/docker-ce/debian/#uninstall-old-versions)
 + [OSX](https://docs.docker.com/docker-for-mac/install/)
@@ -33,8 +33,9 @@ sudo add-apt-repository \
    stable"
 sudo apt-get install docker-ce  
  ```
+## Manual Installation
 
-### 2. Clone this repository
+### 1. Clone this repository
 ```
 git clone https://github.com/ElaadF/docker-wims <directory's path>
 ```   
@@ -80,6 +81,19 @@ docker exec -it <container's name> service apache2 restart
 If you have run the container on your own device, you can access to Wims by using this URL :   
 **http://localhost:port_number_here/wims**   
 You have to **specify the port number** you have chosen previously.
+
+## Quick Installation
+This method use default options to build an image, create a container and run a container.
++ image's name : **wimsimage**
++ container's name : **wimscontainer**
++ port's number : **5050**
++ host's directory : **./data**
++ container's directory : **./data**
+
+Run this command to 
+```
+./runWims
+```
 
 ## Some useful commands
 + delete container :
