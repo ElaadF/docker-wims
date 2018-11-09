@@ -41,14 +41,14 @@ git clone https://github.com/ElaadF/docker-wims <directory's path>
 ```   
 >**Note:** The directory must be empty if you use this command line to clone the project.
 
-### 3. Build an image
+### 2. Build an image
 Use this command to build an image from the Dockerfile in this repository. This will take several minutes.   
 ```
 docker build -t <image's name> <Dockerfile's directory>
 ```   
 >**Note:** The image requires 2.23GB of free space.
 
-### 4. Run the container
+### 3. Run the container
 If the previous step has succed, you have to run the container by creating and starting it with this following command :   
 ```
 docker run -itd -p <host port>:80 -v <host directory's path>:<container target's path> --name <container's name> <image's name>
@@ -68,7 +68,7 @@ docker container start <container's name>
 docker container stop <container's name>
 ```   
 
-### 5. Restart services
+### 4. Restart services
 Run these commands :   
 ```
 docker exec -it <container's name> ./bin/apache-config
@@ -77,12 +77,12 @@ docker exec -it <container's name> service apache2 restart
 
 >**Note:** Always run these commands **after** you start the container. Otherwise it will not work.
 
-### 6. Acces from a web browser
+### 5. Acces from a web browser
 If you have run the container on your own device, you can access to Wims by using this URL :   
 **http://localhost:port_number_here/wims**   
 You have to **specify the port number** you have chosen previously.
 
-## Quick Installation
+## Quick Installation TODO
 This method use default options to build an image, create a container and run a container.
 + image's name : **wimsimage**
 + container's name : **wimscontainer**
