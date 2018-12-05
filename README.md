@@ -94,6 +94,7 @@ Run this command to build an image, run the container and restart the service to
 ```
 ./runWims
 ```
+>**Note:** You may give permission to the script : chmod +x runWims.sh   
 **http://localhost:5050/wims**
 ## Some useful commands
 + delete container :
