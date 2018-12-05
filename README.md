@@ -82,19 +82,19 @@ If you have run the container on your own device, you can access to Wims by usin
 **http://localhost:port_number_here/wims**   
 You have to **specify the port number** you have chosen previously.
 
-## Quick Installation TODO
+## Quick Installation
 This method use default options to build an image, create a container and run a container.
 + image's name : **wimsimage**
 + container's name : **wimscontainer**
 + port's number : **5050**
-+ host's directory : **./data**
++ host's directory : **DATA**
 + container's directory : **./data**
 
-Run this command to 
+Run this command to build an image, run the container and restart the service to acces it from a web browser    
 ```
 ./runWims
 ```
-
+**http://localhost:5050/wims**
 ## Some useful commands
 + delete container :
 ```
