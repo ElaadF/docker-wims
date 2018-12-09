@@ -88,7 +88,7 @@ This method use default options to build an image, create a container and run a 
 + container's name : **wimscontainer**
 + port's number : **5050**
 + host's directory : **DATA**
-+ container's directory : **./data**
++ container's directory : **/DATA*
 
 Run this command to build an image, run the container and restart the service to acces it from a web browser    
 ```
