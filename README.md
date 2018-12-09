@@ -34,7 +34,7 @@ sudo add-apt-repository \
 sudo apt-get install docker-ce  
  ```
 ## Manual Installation
-
+>**Note:** you may have to excecute all the docker's commands with **sudo** privileges.
 ### 1. Clone this repository
 ```
 git clone https://github.com/ElaadF/docker-wims <directory's path>
@@ -92,7 +92,7 @@ This method use default options to build an image, create a container and run a 
 
 Run this command to build an image, run the container and restart the service to acces it from a web browser    
 ```
-./runWims
+./runWims.sh
 ```
 >**Note:** You may give permission to the script : chmod +x runWims.sh   
 **http://localhost:5050/wims**
