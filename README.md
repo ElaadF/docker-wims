@@ -33,6 +33,23 @@ sudo add-apt-repository \
    stable"
 sudo apt-get install docker-ce  
  ```
+ 
+## Quick Installation
+This method use default options to build an image, create a container and run a container.
++ image's name : **wimsimage**
++ container's name : **wimscontainer**
++ port's number : **5050**
++ host's directory : **DATA**
++ container's directory : **/DATA**
+
+Run this command to build an image, run the container and restart the service to acces it from a web browser    
+```
+./runWims.sh
+```
+>**Note:** You may give permission to the script : chmod +x runWims.sh   
+**http://localhost:5050/wims**
+
+
 ## Manual Installation
 >**Note:** you may have to excecute all the docker's commands with **sudo** privileges.
 ### 1. Clone this repository
@@ -82,20 +99,6 @@ If you have run the container on your own device, you can access to Wims by usin
 **http://localhost:port_number_here/wims**   
 You have to **specify the port number** you have chosen previously.
 
-## Quick Installation
-This method use default options to build an image, create a container and run a container.
-+ image's name : **wimsimage**
-+ container's name : **wimscontainer**
-+ port's number : **5050**
-+ host's directory : **DATA**
-+ container's directory : **/DATA**
-
-Run this command to build an image, run the container and restart the service to acces it from a web browser    
-```
-./runWims.sh
-```
->**Note:** You may give permission to the script : chmod +x runWims.sh   
-**http://localhost:5050/wims**
 ## Some useful commands
 + delete container :
 ```
