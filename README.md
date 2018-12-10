@@ -47,7 +47,9 @@ Run this command to build an image, run the container and restart the service to
 ./runWims.sh
 ```
 >**Note:** You may give permission to the script : chmod +x runWims.sh   
-**http://localhost:5050/wims**
+
+Now you can access to Wims by using this URL : **http://localhost:5050/wims**
+
 
 
 ## Manual Installation
