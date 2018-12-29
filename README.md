@@ -52,7 +52,7 @@ Now you can access to Wims by using this URL : **http://localhost:5050/wims**
 
 ## How to use it ?
 The container will still running until you stop it by yourself, shutdown your device or if an error occurs. In theses cases
-you will need to start the container simply by typing on your terminal :   
+you will need to start the container simply by typing in your terminal :   
 ```
 ./runWims.sh
 ```
