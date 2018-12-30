@@ -35,7 +35,7 @@ sudo apt-get install docker-ce
  ```
  
 ## Quick Installation
-This method use default options to build an image, create a container and run a container.
+This method use default options to build an image, create and run a container.
 + image's name : **wimsimage**
 + container's name : **wimscontainer**
 + port's number : **5050**
