@@ -86,6 +86,8 @@ RUN /bin/bash -c "source /etc/apache2/envvars"
 RUN echo 'ServerName 172.17.0.2' >> /etc/apache2/apache2.conf
 RUN echo 'manager_site=172.17.0.2' > log/wims.conf
 RUN echo 'site_manager=2' >> log/wims.conf
+RUN echo "threshold1=$(($(cat /proc/cpuinfo | grep processor | wc -l) * 150))" >> log/wims.conf
+RUN echo "threshold2=$(($(cat /proc/cpuinfo | grep processor | wc -l) * 300))" >> log/wims.conf
 COPY config/myself /home/wims/log/classes/.connections/
 COPY config/.def /home/wims/log/classes/9001/
 RUN a2enmod cgi
